@@ -1,3 +1,5 @@
+import { VsroomPage } from './../pages/vsroom/vsroom';
+import { SocialSharing } from '@ionic-native/social-sharing';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -21,7 +23,7 @@ import { HttpModule } from '@angular/http';
     LoginPage,
   TypeRoomPage,
   PriceRoomPage,
-  RoomDetailPage,
+  RoomDetailPage,VsroomPage
   
  
 
@@ -39,7 +41,7 @@ import { HttpModule } from '@angular/http';
     LoginPage,
     TypeRoomPage,
     PriceRoomPage,
-    RoomDetailPage,
+    RoomDetailPage,VsroomPage
     
 
     
@@ -48,7 +50,7 @@ import { HttpModule } from '@angular/http';
   ],
   providers: [
     StatusBar,
-    SplashScreen,
+    SplashScreen,SocialSharing,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     LoaddataProvider
   ]

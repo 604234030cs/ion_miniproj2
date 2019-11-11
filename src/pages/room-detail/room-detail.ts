@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 //import { SocialSharing } from '@ionic-native/social-sharing';
+import { SocialSharing } from '@ionic-native/social-sharing';
 
 /**
  * Generated class for the RoomDetailPage page.
@@ -17,13 +18,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class RoomDetailPage {
 
   roomdata:any=[];
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,private socialSharing: SocialSharing) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RoomDetailPage');
     this.roomdata = this.navParams.data;
     console.log(this.roomdata);
+  }
+  share(){
+    let title = this.roomdata.name_rentedroom;
+    let overview = this.roomdata.price;
+    this.socialSharing.shareViaFacebook('Moive title'+title+':'+overview);
   }
  
 
