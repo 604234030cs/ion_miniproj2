@@ -54,7 +54,7 @@ getItems(ev: any){
 }
 search(){
   let alert = this.alertCtrl.create();
-  alert.setTitle('เลือกราคาห้องพัก');
+  alert.setTitle('เลือกช่วงราคาห้องพัก');
   alert.addInput({
     type: 'checkbox',
     label: 'น้อยกว่า 3,000',
